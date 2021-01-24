@@ -13,7 +13,7 @@ const initialState = {
 		{
 			name: 'Films',
 			path: 'films',
-			available: false,
+			available: true,
 		},
 		{
 			name: 'Videogames',
