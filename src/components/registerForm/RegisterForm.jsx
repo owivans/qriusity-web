@@ -5,14 +5,17 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import Avatar from '../avatar/avatar';
 import './style.scss';
 
-const RegisterForm = ({ onSubmit, fetchingData, urlAvatar }) => {
+const RegisterForm = ({ onSubmit, fetchingData, urlAvatar, onChangeAvatar }) => {
 	return (
 		fetchingData ? <Spin /> :
 			<div className='register-view fade-in'>
         <div className='register-view__container'>
           <h1>👋 Hi, Welcome to <span className='logo-text'>Qriusity</span>!</h1>
 				<div className='register-view__container__form'>
-					<div className='register-view__container__avatar'><Avatar src={urlAvatar} size={100} /></div>
+					<div className='register-view__container__avatar'>
+            <Avatar src={urlAvatar} size={100} />
+            <span onClick={() => onChangeAvatar()} className='change-avatar'>No!, this not</span>
+          </div>
 					<Form
 						name="normal_login"
 						className="login-form"
@@ -42,7 +45,7 @@ const RegisterForm = ({ onSubmit, fetchingData, urlAvatar }) => {
 
 						<Form.Item>
 							<Button type="primary" htmlType="submit" className="login-form-button">
-								Log in
+								Start Quiz
 						</Button>
 						</Form.Item>
 					</Form>
