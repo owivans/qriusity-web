@@ -9,8 +9,10 @@ const RegisterForm = ({ onSubmit, fetchingData, urlAvatar }) => {
 	return (
 		fetchingData ? <Spin /> :
 			<div className='register-view fade-in'>
-				<div className='register-view__form'>
-					<div className='register-view__avatar'><Avatar src={urlAvatar} size={100} /></div>
+        <div className='register-view__container'>
+          <h1>👋 Hi, Welcome to <span className='logo-text'>Qriusity</span>!</h1>
+				<div className='register-view__container__form'>
+					<div className='register-view__container__avatar'><Avatar src={urlAvatar} size={100} /></div>
 					<Form
 						name="normal_login"
 						className="login-form"
@@ -45,6 +47,7 @@ const RegisterForm = ({ onSubmit, fetchingData, urlAvatar }) => {
 						</Form.Item>
 					</Form>
 				</div>
+			</div>
 			</div>
 	)
 };

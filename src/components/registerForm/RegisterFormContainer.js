@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
+import generateAvatar from './helper';
 import { registerUser } from '../../data/user';
 import RegisterForm from './RegisterForm';
-
 
 const initialState = {
 	fetchingData: false,
 };
-
-const urlAvatar =`https://avatars.dicebear.com/api/human/${Math.random()}.svg`;
 
 class RegisterFormContainer extends Component {
 	constructor(props) {
@@ -17,8 +15,9 @@ class RegisterFormContainer extends Component {
 
 onSubmit = async(dataForm) => {
 		const { history } =this.props;
-		this.setState({ fetchingData: true,})
-		const response = await registerUser({...dataForm, avatar: urlAvatar })
+    this.setState({ fetchingData: true,});
+    const avatar = generateAvatar();
+		const response = await registerUser({...dataForm, avatar })
 
 		if(response) {
 			const { data } = response;
@@ -35,7 +34,7 @@ onSubmit = async(dataForm) => {
 			<RegisterForm
 				onSubmit={this.onSubmit}
 				fetchingData={fetchingData}
-				urlAvatar={urlAvatar}
+				urlAvatar={generateAvatar()}
 			/>
 		)
 	};

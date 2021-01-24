@@ -1,8 +1,12 @@
-const axios = require('axios');
 
-exports.registerUser = async (data) => {
+import axios from 'axios';
+import { CONNECTIONS } from '../config';
+
+const { QRIUSITY_API } = CONNECTIONS;
+
+export const registerUser = async (data) => {
 	try {
-    const url = 'http://localhost:4000/api/user/register';
+    const url = `${QRIUSITY_API}/user/register`;
 		const response = await axios.post(url, data);
 		return response;
 	} catch (error) {
@@ -10,9 +14,9 @@ exports.registerUser = async (data) => {
 	}
 };
 
-exports.updateUser = async (data) => {
+export const updateUser = async (data) => {
 	try {
-    const url = 'http://localhost:4000/api/user/update';
+    const url = `${QRIUSITY_API}/user/update`;
 		const response = await axios.put(url, data);
 		return response;
 	} catch (error) {
@@ -20,9 +24,9 @@ exports.updateUser = async (data) => {
 	}
 };
 
-exports.getMiniorUserRanksByScore = async ({ userScore }) => {
+export const getMiniorUserRanksByScore = async ({ userScore }) => {
 	try {
-    const url = `http://localhost:4000/api/user/score?userScore=${userScore}`;
+    const url = `${QRIUSITY_API}/user/score?userScore=${userScore}`;
 		const response = await axios.get(url);
 		return response;
 	} catch (error) {

@@ -28,8 +28,8 @@ const initialState = {
 	],
 	difficultyLevels: [
 		{ name: 'easy'},
-		{ name: 'normal'},
-		{ name: 'heroic'}
+		{ name: 'medium'},
+		{ name: 'hard'}
 	]
 };
 
