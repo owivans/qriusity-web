@@ -11,7 +11,7 @@ class FinishView extends Component {
 	render() {
 		return (
 			<>
-			<Navbar />
+			<Navbar {...this.props}/>
 			<Rank />
 			</>
 		)
