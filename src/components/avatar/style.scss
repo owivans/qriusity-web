@@ -1,0 +1,9 @@
+.avatar {
+    display: flex;
+    justify-content: center;
+    &__content {
+        border-radius: 50px;
+        background: #dedede;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,55 @@
+.quiz-item-container {
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .quiz-item {
+        width: 70%;
+        .question {
+            font-family: 'itc_souvenirmedium';
+            color: white;
+            font-size: 35px;;
+        }
+        .answer-content {
+            display: flex;
+            justify-content: center;
+            .answers {
+                display: grid;
+                grid-template-columns: 300px 300px;
+    
+                button {
+                    margin: 20px;
+                    background: none;
+                    color: #ef8f75;
+                    border: 1px solid #ef8f75;
+                    &:hover{
+                        background: #ef8f75;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fade-in {
+    -webkit-animation: fade-in 0.5s linear both;
+            animation: fade-in 0.5s linear both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,156 @@
+.finish-view {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .userScore {
+        color: white;
+        font-weight: 800;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .rank-list {
+        width: 400px;
+        .rank-item-container {
+            background: white;
+            border-radius: 45px;
+            display: flex;
+            height: 70px;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+
+            &__content {
+                display: flex;
+                width: 100%;
+                &__name {
+                    width: 100%;
+                    font-size: 23px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: bold;
+                }
+                &__score {
+                    width: calc(100% - 200px);
+                    display: flex;
+                    align-items: baseline;
+                    color: #ff9d88;
+                    font-size: 26px;
+                    font-weight: bold;
+                    img {
+                        margin-right: 5px;
+                    }
+                    .label {
+                        font-size: 15px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .jello-horizontal {
+        -webkit-animation: jello-horizontal 0.9s both;
+                animation: jello-horizontal 0.9s both;
+    }
+    
+    @-webkit-keyframes jello-horizontal {
+        0% {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+        }
+        30% {
+          -webkit-transform: scale3d(1.25, 0.75, 1);
+                  transform: scale3d(1.25, 0.75, 1);
+        }
+        40% {
+          -webkit-transform: scale3d(0.75, 1.25, 1);
+                  transform: scale3d(0.75, 1.25, 1);
+        }
+        50% {
+          -webkit-transform: scale3d(1.15, 0.85, 1);
+                  transform: scale3d(1.15, 0.85, 1);
+        }
+        65% {
+          -webkit-transform: scale3d(0.95, 1.05, 1);
+                  transform: scale3d(0.95, 1.05, 1);
+        }
+        75% {
+          -webkit-transform: scale3d(1.05, 0.95, 1);
+                  transform: scale3d(1.05, 0.95, 1);
+        }
+        100% {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+        }
+      }
+      @keyframes jello-horizontal {
+        0% {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+        }
+        30% {
+          -webkit-transform: scale3d(1.25, 0.75, 1);
+                  transform: scale3d(1.25, 0.75, 1);
+        }
+        40% {
+          -webkit-transform: scale3d(0.75, 1.25, 1);
+                  transform: scale3d(0.75, 1.25, 1);
+        }
+        50% {
+          -webkit-transform: scale3d(1.15, 0.85, 1);
+                  transform: scale3d(1.15, 0.85, 1);
+        }
+        65% {
+          -webkit-transform: scale3d(0.95, 1.05, 1);
+                  transform: scale3d(0.95, 1.05, 1);
+        }
+        75% {
+          -webkit-transform: scale3d(1.05, 0.95, 1);
+                  transform: scale3d(1.05, 0.95, 1);
+        }
+        100% {
+          -webkit-transform: scale3d(1, 1, 1);
+                  transform: scale3d(1, 1, 1);
+        }
+      }
+
+    .slide-in-left {
+        -webkit-animation: slide-in-left 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+                animation: slide-in-left 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    }
+    .slide-in-left-first {
+        -webkit-animation: slide-in-left 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+                animation: slide-in-left 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    }
+
+    @-webkit-keyframes slide-in-left {
+        0% {
+          -webkit-transform: translateX(-1000px);
+                  transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-left {
+        0% {
+          -webkit-transform: translateX(-1000px);
+                  transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      
+}
+

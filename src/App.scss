@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'itc_souvenirmedium';
+  src:url('./assets/souvenir-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.App {
+  text-align: center;
+  background: #342966; /* fallback for old browsers */
+  height: 100vh;
+}
+.ant-btn-primary {
+  background:#5b09ff;
+  color: white;
+  height: 50px;
+  border-radius: 30px;
+  min-width: 200px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+
+  &:hover {
+    background:#4102bd;
+  }
+}
+
+.ant-btn {
+  color:white;
+  background: #ff9d88;
+  height: 50px;
+  border-radius: 30px;
+  min-width: 200px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+
+  &:hover {
+    background:#e08c7a;
+    color:white;
+  }
+}
+
+.ant-input-affix-wrapper {
+  height: 45px;
+  border-radius: 15px;
+}
+.title-section {
+  color: #ff9d88;
+  font-size: 40px;
+  font-weight: 500;
+}
+.title-section-secondary {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+}
+.ant-page-header-heading-title {
+  color: #79c0bc;
+}
+.ant-page-header-back{
+  .ant-page-header-back-button {
+    color: #79c0bc;
+  }
+}
+
+h1, h2, h3 {
+  color:white;
+} 
+
+
+.fade-in {
+  -webkit-animation: fade-in 0.5s linear both;
+          animation: fade-in 0.5s linear both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

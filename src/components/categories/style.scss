@@ -1,0 +1,81 @@
+.categories-view {
+  height: 100vh;
+
+  .header {
+    font-family: 'itc_souvenirmedium';
+  }
+
+  .category-main {
+    text-align: center;
+  }
+
+  .category-container {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .difficulty-container {
+      display: inline;
+
+      .options {
+        display: grid;
+        button {
+          margin: 10px;
+        }
+      }
+    }
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      bottom: 18px;
+      text-align: center;
+      margin: auto;
+      margin-top: 15px;
+    }
+  }
+}
+.content {
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  border-radius: 21px;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+
+  .title {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    bottom: 18px;
+    text-align: center;
+    margin: auto;
+  }
+}
+.category {
+  &__ScienceComputers {
+    background-image: url("../../img/scienceComputers.png");
+  }
+  &__films {
+    background-image: url("../../img/films.png");
+  }
+  &__videogames {
+    background-image: url("../../img/videogames.png");
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    border-radius: 21px;
+  }
+  &__music {
+    background-image: url("../../img/music.png");
+  }
+}
+
+.no-available {
+  filter: blur(2px);
+  opacity: 0.6;
+  cursor: no-drop;
+}
