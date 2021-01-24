@@ -5,6 +5,8 @@ import { fetchQuiz } from '../../data/quiz';
 import { updateUser } from '../../data/user';
 import QuizList from './quizList';
 
+import './style.scss';
+
 const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 20 * 5 * 4 * 1 + 1000 * 30; // Moment is also OK
@@ -59,19 +61,24 @@ class QuizContainer extends Component {
     const { quizList, activeIndex, quizQuantity, score } = this.state;
     return (
       <div>
+        {quizList ?
+        <div>
+        <div className='countdown-container'>
+          <span> ⌛</span>
         <Countdown
-          title="hurry up!"
           value={deadline}
           onFinish={() => this.onFinish()}
         />
-        {quizList ?
-          <QuizList
+        </div>
+        <QuizList
             quizList={quizList}
             activeIndex={activeIndex}
             onSlide={this.onSlide}
             onFinish={this.onFinish}
             quizQuantity={quizQuantity}
           />
+      </div>
+
           : null}
       </div>
     )

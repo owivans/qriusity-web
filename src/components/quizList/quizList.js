@@ -1,8 +1,10 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 import QuizItem from '../categories/quizItem';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
+import './style.scss';
 
 const QuizList = ({
   quizList,
@@ -13,7 +15,7 @@ const QuizList = ({
   const items = quizList.questions.map((quizInformation, index) => {
     return (
       <div>
-        <span>{`${index} / ${quizQuantity}`}</span>
+        <span className='counter'>{`${index} / ${quizQuantity}`}</span>
         <QuizItem quizInformation={quizInformation} onSlide={onSlide} />
       </div>
     )
