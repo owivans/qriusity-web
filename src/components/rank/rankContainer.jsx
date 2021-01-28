@@ -37,7 +37,7 @@ class RankContainer extends Component {
           <div className='jello-horizontal'>
             <Avatar src={cup} size={100} />
           </div>
-          <div className='userScore'>Score: {userData ?.score}
+          <div className='userScore'>Score: {userData?.score}
             <span className='label'>pts</span>
           </div>
           <div className='rank-list'>
