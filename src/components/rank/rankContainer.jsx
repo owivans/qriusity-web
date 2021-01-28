@@ -41,6 +41,7 @@ class RankContainer extends Component {
             <span className='label'>pts</span>
           </div>
           <div className='rank-list'>
+            <div className='box-shadow'></div>
             <RankItem userData={userData} first={true} />
             {userRanks && userRanks.length > 0 ? userRanks.map((rank) =>
               <RankItem userData={rank} />

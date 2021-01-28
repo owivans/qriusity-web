@@ -13,6 +13,18 @@
 
     .rank-list {
         width: 400px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+
+        .box-shadow {
+          background: linear-gradient(0deg, #342966, transparent);
+          height: 90px;
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          z-index: 9;
+        }
         .rank-item-container {
             background: white;
             border-radius: 45px;
@@ -55,7 +67,7 @@
         -webkit-animation: jello-horizontal 0.9s both;
                 animation: jello-horizontal 0.9s both;
     }
-    
+
     @-webkit-keyframes jello-horizontal {
         0% {
           -webkit-transform: scale3d(1, 1, 1);
@@ -151,6 +163,6 @@
         }
       }
 
-      
+
 }
 
