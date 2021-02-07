@@ -8,6 +8,14 @@ In the project directory, you can run:
 
 ### `npm start`
 
+## envs de frontend
+REACT_APP_QRIUSITY_API = http://localhost:4000/api REACT_APP_AVATAR_API = https://avatars.dicebear.com/api/human
+
+## envs del backend
+NODE_ENV=development MONGODB_HOST = Cflqp0TebPelL46H@cluster0.n0hpr.mongodb.net MONGODB_DB = qriusity_db PORT = 4000
+
+
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
